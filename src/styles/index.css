@@ -1,6 +1,6 @@
 
 body{
-    background: #c1b5da;
+    background: linear-gradient(90deg, rgba(193,181,218,1) 0%, rgba(148,187,233,1) 100%);
    
 }
 .todoWrapper{
@@ -18,7 +18,9 @@ body{
 .todoInput{
     outline: none;
     background: none;
-    border: 1px solid #c1b5da;
+    border: 2px solid #c1b5da;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     padding: 0.5rem 1rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
@@ -29,7 +31,9 @@ body{
 .todoButton{
     background: #c1b5da;
     color: #ffffff;
-    border: none;
+    border: 1px solid #c1b5da;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     padding: 0.55rem;
     cursor: pointer;
 }
@@ -47,5 +51,5 @@ body{
   }
   
   .fa-trash-can {
-    margin-left: 0.75rem;
+    margin-left: 0.15rem;
   }
