@@ -1,6 +1,6 @@
 
 body{
-    background: linear-gradient(45deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    background: #c1b5da;
    
 }
 .todoWrapper{
@@ -33,3 +33,19 @@ body{
     padding: 0.55rem;
     cursor: pointer;
 }
+
+.toDo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #c1b5da;
+    color: #393342;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+  
+  .fa-trash-can {
+    margin-left: 0.75rem;
+  }
