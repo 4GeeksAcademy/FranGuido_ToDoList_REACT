@@ -19,12 +19,12 @@ const Home = () => {
 	const deleteTodo = id =>{
 		setTodoList(todoList.filter(todos => todos.id !== id))
 	}
-	
+
 	return (
 		<div className="todoWrapper container mt-5 ">
 			<div className="row ">
 				<div className="col">
-					<h1>To do list</h1>
+					<h1 className="header">TO DO LIST</h1>
 					<TodoForm addTodo={addTodo}/>
 					{todoList.map((todos, index) => (
 						<Todo task={todos} key ={index} deleteTodo = {deleteTodo}/>
