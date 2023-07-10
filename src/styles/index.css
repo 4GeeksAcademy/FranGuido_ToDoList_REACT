@@ -1,12 +1,35 @@
 
-/* 
+body{
+    background: linear-gradient(45deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+   
+}
+.todoWrapper{
+    background: #FFFFFF;
+    width: 60%;
+    border-radius: 5px;
+    margin-top: 5rem;
+    padding: 2rem;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.todoForm{
+    width: 100%;
+}
 
-*/
+.todoInput{
+    outline: none;
+    background: none;
+    border: 1px solid #c1b5da;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 300px;
+    color: #393342;
+}
+
+.todoButton{
+    background: #c1b5da;
+    color: #ffffff;
+    border: none;
+    padding: 0.55rem;
+    cursor: pointer;
+}

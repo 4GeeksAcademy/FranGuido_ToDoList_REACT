@@ -1,24 +1,29 @@
-import React from "react";
+import React, { useDeferredValue } from "react";
+import { useState } from "react";
+import {v4 as uuidv4} from  "uuid";
+import TodoForm from "./TodoForm";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+// initializing uuid (id generator for todo tasks)
+uuidv4();
 
 //create your first component
 const Home = () => {
+
+	const [todoList, setTodoList] = useState([])
+	const addTodo = (todos) =>{
+		setTodoList([...todos])
+		console.log(todos)
+	}
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className="todoWrapper container mt-5 ">
+			<div className="row ">
+				<div className="col">
+					<TodoForm addTodo={addTodo}/>
+				</div>
+			
+			</div>
+			
+			
 		</div>
 	);
 };
