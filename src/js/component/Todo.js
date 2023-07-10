@@ -7,7 +7,7 @@ const Todo = ({task, deleteTodo}) =>{
         <div className="toDo">
             <p>{task.task}</p>
             <div>
-            <FontAwesomeIcon icon={faTrashCan} onClick={() => deleteTodo(task.id)}/>
+            <FontAwesomeIcon className="icon" icon={faTrashCan} onClick={() => deleteTodo(task.id)}/>
             </div>
         </div>
     )

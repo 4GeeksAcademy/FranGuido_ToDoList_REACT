@@ -64,4 +64,13 @@ p{
     margin-bottom: 1rem;
     cursor: pointer;
   }
+
+  
+
+  .icon{
+    opacity: 0%;
+  }
+  .icon:hover{
+    opacity: 100%;
+  }
   
