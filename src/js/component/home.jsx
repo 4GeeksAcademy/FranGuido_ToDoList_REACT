@@ -12,10 +12,11 @@ const Home = () => {
 
 	const [todoList, setTodoList] = useState([])
 	const addTodo = todos =>{
-		setTodoList([...todoList, {id:uuidv4(), task: todos, completed:false, isEditing: false}])
+		setTodoList([...todoList, {id:uuidv4(), task: todos, completed:false, isEditing: false}]) // sets id for each task
 		console.log(todos)
 	}
 
+	// keep all in the list that are different from current id
 	const deleteTodo = id =>{
 		setTodoList(todoList.filter(todos => todos.id !== id))
 	}
