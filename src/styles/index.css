@@ -65,12 +65,30 @@ p{
     cursor: pointer;
   }
 
+  .iconButton{
+    background: #c1b5da;
+    border: #9885c2;
+  }
+
+  .icon{
+    color: #393342; 
+  }
+
+.buttonDiv{
+    width: 100%;
+    opacity: 0%;
+    text-align: end;
+}
+
+.buttonDiv:hover{
+    opacity: 100%;
+}
+
+
   
 
-  /*.icon{
-    opacity: 0%;
-  }
-  .icon:hover{
-    opacity: 100%;
-  }*/
+
+
+  
+  
   
