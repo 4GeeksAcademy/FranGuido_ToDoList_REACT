@@ -31,10 +31,7 @@ const Home = () => {
 						<Todo task={todos} key ={index} deleteTodo = {deleteTodo}/>
 					))}
 				</div>
-			
-			</div>
-			
-			
+			</div>		
 		</div>
 	);
 };
