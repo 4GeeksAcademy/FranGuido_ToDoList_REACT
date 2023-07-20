@@ -21,21 +21,35 @@ const Home = () => {
 		setTodoList(todoList.filter(todos => todos.id !== id))
 	}
 
+	// Delete all tasks at once
+	const deleteAll = () => {
+		setTodoList([]);
+	}
+
+
+	// Counter Tasks
+	function todoCounter() {
+		if (todoList.length === 0) return "No pending tasks. Add a new one!";
+		else return "You have " + todoList.length + " pending tasks.";
+	  }
+	
+
 	
 	// API: USING FAKE TODO LIST API
+
+	// Get API (fetch)
 
 	const todoApi = "https://fake-todo-list-52f9a4ed80ce.herokuapp.com/todos/user/francinieguido"
 	
 	useEffect (() =>{
 		fetch(todoApi).then(result => result.json())
-		.then(data => {console.log(data.result)}).catch(err => err)
+		.then(data => {setTodoList(data)}).catch(err => err)
 	}, []);
 	
-	// GET API Todos (is going to be empty at this point)
-	fetch(todoApi).then(result => result.json()).then(data => console.log(data)).catch(err => err)
-
 
 	//PUT API (add Todos to the list)
+	
+	
 	let newTodoList = [
 		{ label: "Answer email", done: true },
 		{ label: "Take cat to the vet", done: true },
@@ -48,7 +62,8 @@ const Home = () => {
 		body: JSON.stringify(newTodoList),
 		headers: {'Content-Type': 'application/json'}
 	}
-	fetch(todoApi, options).then(response => response.json()).then(data => console.log(data)).catch(err => err)
+
+	fetch(todoApi, options).then(response => response.json()).then(data => data).catch(err => err)
 
 	
 
@@ -57,11 +72,17 @@ const Home = () => {
 			<div className="row ">
 				<div className="col">
 					<h1 className="header">TO DO LIST</h1>
+					<p className="text-center text-secondary">{todoCounter()}</p>
 					<TodoForm addTodo={addTodo} />
 					{todoList.map((todos, index) => (
 						<Todo task={todos} key={index} deleteTodo={deleteTodo} />
 					))}
+					<div className="text-center">
+					<button className="btn btn-danger" onClick={() =>{deleteAll();}} >Delete All</button>
+					</div>
+					
 				</div>
+				
 			</div>
 		</div>
 	);

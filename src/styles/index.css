@@ -14,6 +14,7 @@ p{
     font-family: 'Dosis', sans-serif;
     color:#514c57; 
 }
+
    
 }
 .todoWrapper{
@@ -83,6 +84,8 @@ p{
 .buttonDiv:hover{
     opacity: 100%;
 }
+
+
 
 
   
