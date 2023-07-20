@@ -58,9 +58,9 @@ const Home = () => {
 		{ label: "Call friend", done: false},
 	]
 	let options = {
-		method: 'PUT',
+		method: "PUT",
 		body: JSON.stringify(newTodoList),
-		headers: {'Content-Type': 'application/json'}
+		headers: {"Content-Type": "application/json"}
 	}
 
 	fetch(todoApi, options).then(response => response.json()).then(data => data).catch(err => err)
