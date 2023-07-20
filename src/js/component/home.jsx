@@ -43,7 +43,7 @@ const Home = () => {
 		{ label: "Go grocery shopping", done: false},
 		{ label: "Call friend", done: false},
 	]
-	let optionsB = {
+	let options = {
 		method: 'PUT',
 		body: JSON.stringify(newTodoList),
 		headers: {'Content-Type': 'application/json'}
